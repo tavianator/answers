@@ -39,7 +39,7 @@
       & = \E \sum_{i=1}^n \left(\sum_{j=1}^k Z_{j,i}^2 + \sum_{j=1}^k \sum_{\substack{m=1 \\ m \ne j}}^k Z_{j,i} Z_{m,i}\right) \\
       & = \sum_{j=1}^k \E \sum_{i=1}^n Z_{j,i}^2 + \sum_{i=1}^n \sum_{j=1}^k \sum_{\substack{m=1 \\ m \ne j}}^k \E (Z_{j,i} Z_{m,i}) \\
       & = \sum_{j=1}^k \E \|Z_j\|_2^2 + \sum_{i=1}^n \sum_{j=1}^k \sum_{\substack{m=1 \\ m \ne j}}^k (\E Z_{j,i}) (\E Z_{m,i}) \tag{by independence} \\
-      & = \sum_{j=1}^k \E \|Z_j\|_2^2
+      & = \sum_{j=1}^k \E \|Z_j\|_2^2.
     \end{align*}
 
   \item
@@ -54,6 +54,23 @@
 \end{exercise}
 
 \begin{exercise}{0.0.5}
+  The first inequality:
+  \begin{align*}
+    \left(\frac{n}{m}\right)^m & = \frac{n}{m} \left(\frac{n}{m}\right)^{m-1} \\
+    & \le \frac{n}{m} \left(\frac{n-1}{m-1}\right)^{m-1} \\
+    & \le \frac{n}{m} \frac{n-1}{m-1} \cdots \frac{n-m+1}{1} \\
+    & = \binom{n}{m}. \\
+    \intertext{The second:}
+    \binom{n}{m} & \le \binom{n}{m} + \sum_{k=0}^{m-1} \binom{n}{k} \\
+    & = \sum_{k=0}^m \binom{n}{k}. \\
+    \intertext{The third:}
+    \sum_{k=0}^m \binom{n}{k} \left(\frac{m}{n}\right)^m & \le \sum_{k=0}^m \binom{n}{k} \left(\frac{m}{n}\right)^k \\
+    & = \left(1 + \frac{m}{n}\right)^m, \\
+    \intertext{therefore}
+    \sum_{k=0}^m \binom{n}{k} & \le \left(1 + \frac{m}{n}\right)^m \left(\frac{n}{m}\right)^m. \\
+    & = \left(\frac{n + m}{m}\right)^m \\
+    & \le \left(\frac{e n}{m}\right)^m.
+  \end{align*}
 \end{exercise}
 
 \begin{exercise}{0.0.6}

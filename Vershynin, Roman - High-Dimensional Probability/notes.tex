@@ -48,7 +48,7 @@
       & = \E \sum_{i=1}^n (Z_i^2 - 2 Z_i \E{Z_i} + (\E{Z_i})^2) \\
       & = \E \sum_{i=1}^n Z_i^2 - 2 \sum_{i=1}^n \E Z_i \E{Z_i} + \sum_{i=1}^n (\E Z_i)^2 \\
       & = \E \sum_{i=1}^n Z_i^2 -  \sum_{i=1}^n (\E Z_i)^2 \\
-      & = \E \|Z\|_2^2 - \|\E Z\|_2^2
+      & = \E \|Z\|_2^2 - \|\E Z\|_2^2.
     \end{align*}
   \end{enumerate}
 \end{exercise}
@@ -67,7 +67,7 @@
     \sum_{k=0}^m \binom{n}{k} \left(\frac{m}{n}\right)^m & \le \sum_{k=0}^m \binom{n}{k} \left(\frac{m}{n}\right)^k \\
     & = \left(1 + \frac{m}{n}\right)^m, \\
     \intertext{therefore}
-    \sum_{k=0}^m \binom{n}{k} & \le \left(1 + \frac{m}{n}\right)^m \left(\frac{n}{m}\right)^m. \\
+    \sum_{k=0}^m \binom{n}{k} & \le \left(1 + \frac{m}{n}\right)^m \left(\frac{n}{m}\right)^m \\
     & = \left(\frac{n + m}{m}\right)^m \\
     & \le \left(\frac{e n}{m}\right)^m.
   \end{align*}
@@ -78,6 +78,12 @@
 
 
 \chapter{Preliminaries on Random Variables}
+
+\section{Basic Quantities Associated with Random Variables}
+
+(No exercises.)
+
+\section{Some Classical Inequalities}
 
 \begin{exercise}{1.2.2}
   Split $X$ into its positive and negative part, and apply Lemma 1.2.1 to each:
@@ -99,6 +105,7 @@
 \end{exercise}
 
 \begin{exercise}{1.2.6}
+  Square both sides, and apply Markov's inequality (proposition 1.2.4).
   \begin{align*}
     \P{|X - \mu| \ge t} & = \P{(X - \mu)^2 \ge t^2} \\
     & \le \frac{\E (X - \mu)^2}{t^2} \\
@@ -106,13 +113,620 @@
   \end{align*}
 \end{exercise}
 
+\section{Limit Theorems}
+
 \begin{exercise}{1.3.3}
-  Let $\sigma^2 = \Var(X_i)$.
+  Let $\sigma^2 = \Var(X_i)$.  The square of the desired expectation is
   \begin{align*}
     \left(\E \left|\frac{1}{N} \sum_{i=1}^N X_i - \mu\right|\right)^2 & \le \E \left(\frac{1}{N} \sum_{i=1}^N X_i - \mu\right)^2 \tag{by Jensen's inequality} \\
     & = \Var \left(\frac{1}{N} \sum_{i=1}^N X_i\right) \\
     & = \frac{\sigma^2}{N}. \tag{by equation 1.5}
   \end{align*}
+  Taking the square root,
+  \begin{align*}
+    \E \left|\frac{1}{N} \sum_{i=1}^N X_i - \mu\right| \le \frac{\sigma}{\sqrt{N}} = O\left(\frac{1}{\sqrt{N}}\right).
+  \end{align*}
 \end{exercise}
+
+\section{Notes}
+
+(No exercises.)
+
+
+\chapter{Concentration of Sums of Independent Random Variables}
+
+\section{Why Concentration Inequalities?}
+
+\begin{exercise}{2.1.4}
+\end{exercise}
+
+\section{Hoeffding's Inequality}
+
+\begin{exercise}{2.2.3}
+\end{exercise}
+
+\begin{exercise}{2.2.7}
+\end{exercise}
+
+\begin{exercise}{2.2.8}
+\end{exercise}
+
+\begin{exercise}{2.2.9}
+\end{exercise}
+
+\begin{exercise}{2.2.10}
+\end{exercise}
+
+\section{Chernoff's Inequality}
+
+\begin{exercise}{2.3.2}
+\end{exercise}
+
+\begin{exercise}{2.3.3}
+\end{exercise}
+
+\begin{exercise}{2.3.5}
+\end{exercise}
+
+\begin{exercise}{2.3.6}
+\end{exercise}
+
+\begin{exercise}{2.3.8}
+\end{exercise}
+
+\section{Application: Degrees of Random Graphs}
+
+\begin{exercise}{2.4.2}
+\end{exercise}
+
+\begin{exercise}{2.4.3}
+\end{exercise}
+
+\begin{exercise}{2.4.4}
+\end{exercise}
+
+\begin{exercise}{2.4.5}
+\end{exercise}
+
+\section{Sub-Gaussian Distributions}
+
+\subsection{Sub-Gaussian Properties}
+
+\begin{exercise}{2.5.1}
+\end{exercise}
+
+\begin{exercise}{2.5.4}
+\end{exercise}
+
+\begin{exercise}{2.5.5}
+\end{exercise}
+
+\subsection{Definition and Examples of Sub-Gaussian Distributions}
+
+\begin{exercise}{2.5.7}
+\end{exercise}
+
+\begin{exercise}{2.5.9}
+\end{exercise}
+
+\begin{exercise}{2.5.10}
+\end{exercise}
+
+\begin{exercise}{2.5.11}
+\end{exercise}
+
+\section{General Hoeffding and Khintchine Inequalities}
+
+\begin{exercise}{2.6.4}
+\end{exercise}
+
+\begin{exercise}{2.6.5}
+\end{exercise}
+
+\begin{exercise}{2.6.6}
+\end{exercise}
+
+\begin{exercise}{2.6.7}
+\end{exercise}
+
+\subsection{Centering}
+
+\begin{exercise}{2.6.9}
+\end{exercise}
+
+\section{Sub-Exponential Distributions}
+
+\begin{exercise}{2.7.2}
+\end{exercise}
+
+\begin{exercise}{2.7.3}
+\end{exercise}
+
+\begin{exercise}{2.7.4}
+\end{exercise}
+
+\begin{exercise}{2.7.10}
+\end{exercise}
+
+\subsection{A More General View: Orlicz Spaces}
+
+\begin{exercise}{2.7.11}
+\end{exercise}
+
+\section{Bernstein's Inequality}
+
+\begin{exercise}{2.8.5}
+\end{exercise}
+
+\begin{exercise}{2.8.6}
+\end{exercise}
+
+\section{Notes}
+
+(No exercises.)
+
+
+\chapter{Random Vectors in High Dimensions}
+
+\section{Concentration of the Norm}
+
+\begin{exercise}{3.1.4}
+\end{exercise}
+
+\begin{exercise}{3.1.5}
+\end{exercise}
+
+\begin{exercise}{3.1.6}
+\end{exercise}
+
+\begin{exercise}{3.1.7}
+\end{exercise}
+
+\section{Covariance Matrices and Principal Component Analysis}
+
+\subsection{Principal Component Analysis}
+
+(No exercises.)
+
+\subsection{Isotropy}
+
+\begin{exercise}{3.2.2}
+\end{exercise}
+
+\subsection{Properties of Isotropic Distributions}
+
+\begin{exercise}{3.2.6}
+\end{exercise}
+
+\section{Examples of High-Dimensional Distributions}
+
+\subsection{Spherical and Bernoulli Distributions}
+
+\begin{exercise}{3.3.1}
+\end{exercise}
+
+\subsection{Multivariate Normal}
+
+\begin{exercise}{3.3.3}
+\end{exercise}
+
+\begin{exercise}{3.3.4}
+\end{exercise}
+
+\begin{exercise}{3.3.5}
+\end{exercise}
+
+\begin{exercise}{3.3.6}
+\end{exercise}
+
+\subsection{Similarity of Normal and Spherical Distributions}
+
+\begin{exercise}{3.3.7}
+\end{exercise}
+
+\subsection{Frames}
+
+\begin{exercise}{3.3.9}
+\end{exercise}
+
+\subsection{Isotropic Convex Sets}
+
+(No exercises.)
+
+\section{Sub-Gaussian Distributions in Higher Dimensions}
+
+\begin{exercise}{3.4.3}
+\end{exercise}
+
+\subsection{Gaussian and Bernoulli Distributions}
+
+(No exercises.)
+
+\subsection{Discrete Distributions}
+
+\begin{exercise}{3.4.4}
+\end{exercise}
+
+\begin{exercise}{3.4.5}
+\end{exercise}
+
+\subsection{Uniform Distribution on the Sphere}
+
+\begin{exercise}{3.4.7}
+\end{exercise}
+
+\subsection{Uniform Distribution on Convex Sets}
+
+\begin{exercise}{3.4.9}
+\end{exercise}
+
+\begin{exercise}{3.4.10}
+\end{exercise}
+
+\section{Application: Grothendieck's Inequality and Semidefinite Programming}
+
+\begin{exercise}{3.5.2}
+\end{exercise}
+
+\begin{exercise}{3.5.3}
+\end{exercise}
+
+\subsection{Semidefinite Programming}
+
+\begin{exercise}{3.5.5}
+\end{exercise}
+
+\begin{exercise}{3.5.7}
+\end{exercise}
+
+\section{Application: Maximum Cut for Graphs}
+
+\subsection{Graphs and Cuts}
+
+(No exercises.)
+
+\subsection{A Simple 0.5-Approximation Algorithm}
+
+\begin{exercise}{3.6.4}
+\end{exercise}
+
+\subsection{Semidefinite Relaxation}
+
+\begin{exercise}{3.6.6}
+\end{exercise}
+
+\begin{exercise}{3.6.7}
+\end{exercise}
+
+\section{Kernel Trick, and Tightening of Grothendieck's Inequality}
+
+\begin{exercise}{3.7.4}
+\end{exercise}
+
+\begin{exercise}{3.7.5}
+\end{exercise}
+
+\begin{exercise}{3.7.6}
+\end{exercise}
+
+\subsection{Kernels and Feature Maps}
+
+(No exercises.)
+
+\section{Notes}
+
+(No exercises.)
+
+
+\chapter{Random Matrices}
+
+\section{Preliminaries on Matrices}
+
+\subsection{Singular Value Decomposition}
+
+\begin{exercise}{4.1.1}
+  Let $U$ (resp. $V$) be a matrix with $u_i$ (resp. $v_i$) as columns, and $\Sigma$ be a diagonal matrix with $s_i$ as its entries.
+  The singular value decomposition of $A$ (4.1) is equivalent to
+  \begin{align*}
+    A = U \Sigma V^{\top}.
+  \end{align*}
+  Since the columns of $U$ and $V$ are orthonormal, they are orthogonal matrices.
+  Therefore we can compute
+  \begin{align*}
+    A^{-1} & = (U \Sigma V^{\top})^{-1} \\
+    & = (V^{\top})^{-1} \Sigma^{-1} U^{-1} \\
+    & = V \Sigma^{-1} U^{\top} \\
+    & = \sum_{i=1}^n \frac{1}{s_i} v_i u_i^{\top}.
+  \end{align*}
+\end{exercise}
+
+\subsection{Operator Norm and the Extreme Singular Values}
+
+(No exercises.)
+
+\subsection{Frobenius Norm}
+
+\begin{exercise}{4.1.2}
+\end{exercise}
+
+\subsection{Low-Rank Approximation}
+
+\begin{exercise}{4.1.3}
+\end{exercise}
+
+\subsection{Approximate Isometries}
+
+\begin{exercise}{4.1.4}
+\end{exercise}
+
+\begin{exercise}{4.1.6}
+\end{exercise}
+
+\begin{exercise}{4.1.8}
+\end{exercise}
+
+\section{Nets, Covering Numbers, and Packing Numbers}
+
+\begin{exercise}{4.2.5}
+\end{exercise}
+
+\begin{exercise}{4.2.9}
+\end{exercise}
+
+\begin{exercise}{4.2.10}
+\end{exercise}
+
+\subsection{Covering Numbers and Volume}
+
+\begin{exercise}{4.2.15}
+\end{exercise}
+
+\begin{exercise}{4.2.16}
+\end{exercise}
+
+\subsection{Application: Error Correcting Codes}
+
+\subsection{Metric Entropy and Complexity}
+
+(No exercises.)
+
+\subsection{Error Correcting Codes}
+
+\begin{exercise}{4.3.7}
+\end{exercise}
+
+\section{Upper Bounds on Random Sub-Gaussian Matrices}
+
+\subsection{Computing the Norm on a Net}
+
+\begin{exercise}{4.4.2}
+\end{exercise}
+
+\begin{exercise}{4.4.3}
+\end{exercise}
+
+\begin{exercise}{4.4.4}
+\end{exercise}
+
+\subsection{The Norms of Sub-Gaussian Random Matrices}
+
+\begin{exercise}{4.4.6}
+\end{exercise}
+
+\begin{exercise}{4.4.7}
+\end{exercise}
+
+\section{Application: Community Detection in Networks}
+
+\subsection{Stochastic Block Model}
+
+(No exercises.)
+
+\subsection{Expected Adjacency Matrix}
+
+\begin{exercise}{4.5.2}
+\end{exercise}
+
+\subsection{Perturbation Theory}
+
+\begin{exercise}{4.5.4}
+\end{exercise}
+
+\subsection{Spectral Clustering}
+
+(No exercises.)
+
+\section{Two-Sided Bounds on Sub-Gaussian Matrices}
+
+\begin{exercise}{4.6.2}
+\end{exercise}
+
+\begin{exercise}{4.6.3}
+\end{exercise}
+
+\begin{exercise}{4.6.4}
+\end{exercise}
+
+\section{Application: Covariance Estimation and Clustering}
+
+\begin{exercise}{4.7.1}
+\end{exercise}
+
+\subsection{Application: Clustering of Point Sets}
+
+\begin{exercise}{4.7.6}
+\end{exercise}
+
+\section{Notes}
+
+(No exercises.)
+
+
+\chapter{Concentration Without Independence}
+
+\section{Concentration of Lipschitz Functions for the Sphere}
+
+\subsection{Lipschitz Functions}
+
+\begin{exercise}{5.1.2}
+\end{exercise}
+
+\begin{exercise}{5.1.3}
+\end{exercise}
+
+\subsection{Concentration via Isoperimetric Inequalities}
+
+(No exercises.)
+
+\subsection{Blow-Up of Sets on the Sphere}
+
+\begin{exercise}{5.1.8}
+\end{exercise}
+
+\begin{exercise}{5.1.9}
+\end{exercise}
+
+\subsection{Proof of Theorem 5.1.4}
+
+\begin{exercise}{5.1.11}
+\end{exercise}
+
+\begin{exercise}{5.1.12}
+\end{exercise}
+
+\begin{exercise}{5.1.13}
+\end{exercise}
+
+\begin{exercise}{5.1.14}
+\end{exercise}
+
+\begin{exercise}{5.1.15}
+\end{exercise}
+
+\section{Concentration for Other Metric Measure Spaces}
+
+\subsection{Gaussian Concentration}
+
+\begin{exercise}{5.2.3}
+\end{exercise}
+
+\begin{exercise}{5.2.4}
+\end{exercise}
+
+\subsection{Hamming Cube}
+
+(No exercises.)
+
+\subsection{Symmetric Group}
+
+(No exercises.)
+
+\subsection{Riemannian Manifolds with Strictly Positive Curvature}
+
+(No exercises.)
+
+\subsection{Special Orthogonal Group}
+
+(No exercises.)
+
+\subsection{Grassmannian}
+
+(No exercises.)
+
+\subsection{Continuous Cube and Euclidean Ball}
+
+\begin{exercise}{5.2.11}
+\end{exercise}
+
+\begin{exercise}{5.2.12}
+\end{exercise}
+
+\begin{exercise}{5.2.13}
+\end{exercise}
+
+\begin{exercise}{5.2.14}
+\end{exercise}
+
+\subsection{Densities $e^{-U(c)}$}
+
+(No exercises.)
+
+\subsection{Random Vectors with Independent Bounded Coordinates}
+
+(No exercises.)
+
+\section{Application: Johnson-Lindenstrauss Lemma}
+
+\begin{exercise}{5.3.3}
+\end{exercise}
+
+\begin{exercise}{5.3.4}
+\end{exercise}
+
+\section{Matrix Bernstein Inequality}
+
+\subsection{Matrix Calculus}
+
+\begin{exercise}{5.4.3}
+\end{exercise}
+
+\begin{exercise}{5.4.5}
+\end{exercise}
+
+\subsection{Trace Inequalities}
+
+\begin{exercise}{5.4.6}
+\end{exercise}
+
+\subsection{Proof of Matrix Bernstein Inequality}
+
+(No exercises.)
+
+\subsection{Matrix Khintchine Inequality}
+
+\begin{exercise}{5.4.11}
+\end{exercise}
+
+\begin{exercise}{5.4.12}
+\end{exercise}
+
+\begin{exercise}{5.4.13}
+\end{exercise}
+
+\begin{exercise}{5.4.14}
+\end{exercise}
+
+\begin{exercise}{5.4.15}
+\end{exercise}
+
+\section{Application: Community Detection in Sparse Networks}
+
+\begin{exercise}{5.5.1}
+\end{exercise}
+
+\begin{exercise}{5.5.2}
+\end{exercise}
+
+\section{Application: Covariance Estimation for General Distributions}
+
+\begin{exercise}{5.6.4}
+\end{exercise}
+
+\begin{exercise}{5.6.5}
+\end{exercise}
+
+\begin{exercise}{5.6.6}
+\end{exercise}
+
+\begin{exercise}{5.6.7}
+\end{exercise}
+
+\begin{exercise}{5.6.8}
+\end{exercise}
+
+\section{Notes}
+
+(No exercises.)
+
 
 \end{document}

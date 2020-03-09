@@ -138,6 +138,18 @@
 \section{Why Concentration Inequalities?}
 
 \begin{exercise}{2.1.4}
+  $g$ has the probability density function $f_g(x) = \frac{1}{\sqrt{2 \pi}} e^{\slfrac{-x^2}{2}}$.
+  Note that
+  \begin{align*}
+    \frac{d}{dx} f_g(x) & = -x \frac{1}{\sqrt{2 \pi}} e^{\slfrac{-x^2}{2}} \\
+    & = -x f_g(x).
+  \end{align*}
+  By the law of the unconscious statistician,
+  \begin{align*}
+    \E g^2 \ind{g > t} & = \int_t^\infty x^2 f_g(x) dx \\
+    & = -x f_g(x) \Big|_t^\infty - \int_t^\infty -f_g(x) dx \\
+    & = t \frac{1}{\sqrt{2 \pi}} e^{\slfrac{-t^2}{2}} + \P{g > t}.
+  \end{align*}
 \end{exercise}
 
 \section{Hoeffding's Inequality}

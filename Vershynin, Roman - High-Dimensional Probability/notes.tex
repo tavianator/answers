@@ -469,6 +469,46 @@
 \subsection{Approximate Isometries}
 
 \begin{exercise}{4.1.4}
+  To show (a)$\implies$(b), we show that both
+  \begin{align*}
+    P^2 & = A A^\top A A^\top \\
+    & = A I_n A^\top \\
+    & = P,
+  \end{align*}
+  and since $P^\top = P$, for any vectors $x$ and $y$ such that $y$ is in the kernel of $P$,
+  \begin{align*}
+    P x \cdot y & = x \cdot P^\top y \\
+    & = x \cdot P y \\
+    & = 0.
+  \end{align*}
+
+  Next, (b)$\implies$(c) because
+  \begin{align*}
+    \|A x\|_2^2 & = (A x) \cdot (A x) \\
+    & = (A x)^\top (A x) \\
+    & = x^\top A^\top A x \\
+    & = x^\top x \\
+    & = \|x\|_2^2.
+  \end{align*}
+
+  To see that (c)$\implies$(d), we show that both
+  \begin{align*}
+    s_1(A) & = \|A\| \\
+    & = \max_{x \in \mathbb{R}^n \setminus \{0\}} \frac{\|A x\|_2}{\|x\|_2} \\
+    & = \max_{x \in \mathbb{R}^n \setminus \{0\}} \frac{\|x\|_2}{\|x\|_2} \\
+    & = 1,
+  \end{align*}
+  and
+  \begin{align*}
+    s_n(A) & = \frac{1}{\|A^+\|} \\
+    & = \left( \max_{x \in \mathrm{im}(A)} \frac{\|A^{-1} x\|_2}{\|x\|_2} \right)^{-1} \\
+    & = \left( \max_{x \in \mathbb{R}^n \setminus \{0\}} \frac{\|A^{-1}(A x)\|_2}{\|A x\|_2} \right)^{-1} \\
+    & = \left( \max_{x \in \mathbb{R}^n \setminus \{0\}} \frac{\|x\|_2}{\|x\|_2} \right)^{-1} \\
+    & = 1.
+  \end{align*}
+
+  Finally, to show (d)$\implies$(a), note that the singular values $s_i(A)$ are the eigenvalues of the $n \times n$ matrix $A^\top A$.
+  Since these all equal one, $A^\top A = I$.
 \end{exercise}
 
 \begin{exercise}{4.1.6}
